@@ -1,0 +1,81 @@
+{
+  "name": "declarapi-formgen",
+  "version": "0.0.1",
+  "homepage": "https://mmagyar.com",
+  "author": "mmagyar.com",
+  "dependencies": {
+    "@testing-library/react": "^10.4.3",
+    "@testing-library/user-event": "^12.0.9",
+    "@types/jest": "26.0.3",
+    "@types/react": "16.9.41",
+    "@types/react-dom": "^16.9.8",
+    "connected-react-router": "^6.8.0",
+    "jest-extended": "^0.11.5",
+    "microtil": "^1.1.4",
+    "npm-watch": "^0.6.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-scripts": "^3.4.1",
+    "ts-jest": "^26.1.1",
+    "typescript": "3.9.5",
+    "yaschva": "^1.2.14"
+  },
+  "watch": {
+    "test": "{src,test}/*.{ts,tsx}"
+  },
+  "scripts": {
+    "watch": "npm-watch",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "jest --coverage=true  --no-cache",
+    "test:coverage": "jest --coverage=true  --no-cache",
+    "test:watch": "jest --watch",
+    "test:clearCache": "jest --clearCache",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "jest": {
+    "setupFilesAfterEnv": ["./jest.setup.ts"],
+
+    "roots": [
+      "<rootDir>/src"
+    ],
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.tsx?$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ],
+    "collectCoverageFrom": [
+      "**/*.{js,jsx,ts,tsx}",
+      "!**/node_modules/**",
+      "!./src/bin/**",
+      "!**/vendor/**"
+    ],
+    "resetModules": true,
+    "clearMocks": true
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.10.1"
+  }
+}
